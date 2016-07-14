@@ -4,7 +4,7 @@
 <head>
     <title>Acme Product Management</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link href="app/app.component.css" rel="stylesheet" />
 
@@ -22,12 +22,12 @@
     <!-- 2. Configure SystemJS -->
     <script>
         System.config({
-        packages: {        
+        packages: {
           app: {
             format: 'register',
             defaultExtension: 'js'
           }
-        }
+        }   
       });
       System.import('app/main')
             .then(null, console.error.bind(console));
@@ -35,7 +35,8 @@
 </head>
 
 <body>
-    Starter files for Angular2: Getting Started.
+    <!-- Using the selector from @Component.  '<pm-app></pm-app>' is called a directive, i.e. a custom element -->
+    <pm-app>Loading App ...</pm-app>
 </body>
 
 </html>
