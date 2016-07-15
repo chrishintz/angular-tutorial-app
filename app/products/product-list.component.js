@@ -21,6 +21,10 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             ProductListComponent = (function () {
                 function ProductListComponent() {
                     this.pageTitle = 'Product List';
+                    this.imageWidth = 50;
+                    this.imageMargin = 2;
+                    this.showImage = false;
+                    this.listFilter = 'cart';
                     this.products = [
                         {
                             "productId": 1,
@@ -74,6 +78,11 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                         }
                     ];
                 }
+                // Method doesn't have a return type, so we specify the return type as void
+                ProductListComponent.prototype.toggleImage = function () {
+                    // toggles the state of the showImage property
+                    this.showImage = !this.showImage;
+                };
                 ProductListComponent = __decorate([
                     core_1.Component({
                         selector: 'pm-products',

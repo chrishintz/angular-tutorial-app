@@ -7,6 +7,10 @@ import { Component } from 'angular2/core';
 
 export class ProductListComponent {
   pageTitle: string = 'Product List';
+  imageWidth: number = 50;
+  imageMargin: number = 2;
+  showImage: boolean = false;
+  listFilter: string = 'cart';
   products: any[] = [
       {
           "productId": 1,
@@ -59,4 +63,9 @@ export class ProductListComponent {
           "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
       }
   ];
+  // Method doesn't have a return type, so we specify the return type as void
+  toggleImage(): void {
+    // toggles the state of the showImage property
+    this.showImage = !this.showImage;
+  }
 }
